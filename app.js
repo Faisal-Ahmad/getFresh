@@ -11,11 +11,12 @@ var app = express();
 app.set('view engine', 'ejs');
 
 //middleware
-app.use(bodyParser.urlencoded({'entended':false}));
+app.use(bodyParser.urlencoded({'extended':false}));
 app.use(expressSession({secret:'my top secret password', saveUninitialized: true, resave: false}));
 app.use(cookieParser());
 
-app.use('login',login);
+//app.use(express.static( login+ '/login/css'));
+app.use('/login',login);
 
 //routing
 app.get('/', function(req, res){
