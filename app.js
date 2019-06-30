@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({'extended':false}));
 app.use(expressSession({secret:'my top secret password', saveUninitialized: true, resave: false}));
 app.use(cookieParser());
 
-//app.use(express.static( login+ '/login/css'));
+app.use(express.static(__dirname+'/public'));
 app.use('/login',login);
 
 //routing
