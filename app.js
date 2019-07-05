@@ -8,6 +8,7 @@ var login = require('./controllers/login');
 var register = require('./controllers/register');
 var admin = require('./controllers/admin');
 var home = require('./controllers/home');
+var supplier = require('./controllers/supplier');
 var app = express();
 
 //configuration
