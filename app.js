@@ -20,6 +20,7 @@ app.use(cookieParser());
 
 app.use(express.static(__dirname+'/public'));
 app.use('/login',login);
+app.use('/supplier',supplier);
 app.use('/register',register);
 app.use('/admin',admin);
 app.use('/home',home);
