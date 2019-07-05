@@ -17,7 +17,11 @@ var getConnection = function(callback){
 	connection.connect(function(err) {
 	  	if (err){
 	  		console.log('Error in connection...');
-	  	}
+		  }
+		  else
+		  {
+			console.log('connection...');
+		  }
 	});
 	callback(connection);
 }

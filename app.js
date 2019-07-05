@@ -7,6 +7,7 @@ var cookieParser = require('cookie-parser');
 var login = require('./controllers/login');
 var register = require('./controllers/register');
 var admin = require('./controllers/admin');
+var supplier = require('./controllers/supplier');
 var app = express();
 
 //configuration
@@ -21,7 +22,7 @@ app.use(express.static(__dirname+'/public'));
 app.use('/login',login);
 app.use('/supplier',supplier);
 app.use('/register',register);
-app.use('/register',admin);
+app.use('/admin',admin);
 
 //routing
 app.get('/', function(req, res){
