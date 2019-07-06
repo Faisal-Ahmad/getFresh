@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method="post">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <h1>Add Product </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>User Id : </h3>
+                        </td>
+                        <td>
+                                <input type="text" name="userId" value="<%=userId %>" readonly>
+                        </td>
+                    </tr>   
+                    <tr>
+                        <td>
+                            <h3>Name : </h3>
+                        </td>
+                        <td>
+                                <input type="text" name="name">
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <h3>Description : </h3>
+                            </td>
+                            <td>
+                                <input type="text" name="description" row='10'>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <h3>Price : </h3>
+                            </td>
+                            <td>
+                                <input type="text" name="price">
+                            </td>
+                    </tr>   
+                    <tr>
+                            <td>
+                            </td>
+                            <td>
+                                <input type="submit" value="Add">
+                                <input type="button" onclick="location.href='/supplier'" value="Back">
+                            </td>
+                    </tr>                      
+                </table>
+            </form>
+    </body>
+<html>

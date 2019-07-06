@@ -1,15 +1,10 @@
-
-
 var mysql = require('mysql');
-
-
-
 
 var setup = {
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'getfresh'
+  database : 'productdb'
 };
 
 var getConnection = function(callback){
