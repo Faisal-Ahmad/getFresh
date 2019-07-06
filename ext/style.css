@@ -1,0 +1,71 @@
+
+
+.head {
+  padding-top: 80px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;
+  background-color: White;
+  text-align: center;
+}
+.h3 {
+	float:left;
+	padding-top: 250px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+  padding-left: 300px;
+  
+  background: url(fruit.jpg) no-repeat;
+  background-size: 300px 300px;
+}
+
+.h4 {
+	float:center;
+	padding-top: 250px;
+  padding-right: 100px;
+  padding-bottom: 80px;
+  padding-left: 300px;
+  
+  background: url(deli.jpg) no-repeat;
+  background-size: 300px 300px;
+}
+
+
+.head1 {
+   float: right;
+  width: 500px;
+  padding-top: 60px;
+  line-height: 1.6;
+  font-size: 20px;
+   font-weight: bold;
+   
+  
+  
+  
+}
+
+.head5 {
+
+  
+  font-size: 20px;
+   font-weight: bold;
+    text-align: center;
+  
+  
+  
+}
+.h6 {
+
+    padding-top: 60px;
+    font-size: 20px;
+   font-weight: bold;
+    
+  
+  
+  
+}
+
+
+body {
+  background-color: powderblue;
+}

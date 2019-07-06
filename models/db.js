@@ -1,24 +1,23 @@
-
-
 var mysql = require('mysql');
 
-
-
-
-var setup = {
+var confiq = {
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'getfresh' 
+  database : 'node1'
 };
 
 var getConnection = function(callback){
-	var connection = mysql.createConnection(setup);
+
+	var connection = mysql.createConnection(confiq);
+	
 	connection.connect(function(err) {
 	  	if (err){
-	  		console.log('Error in connection...');
+	  		console.log('Connection error...');
 	  	}
+	  	console.log('connected as id ' + connection.threadId);
 	});
+
 	callback(connection);
 }
 
@@ -36,7 +35,7 @@ module.exports= {
 			});
 
 			connection.end(function(err) {
-				console.log('connection ends');
+				console.log('connection ending....');
 			});
 		});
 	},
@@ -53,8 +52,12 @@ module.exports= {
 			});
 
 			connection.end(function(err) {
-				console.log('connection ends');
+				console.log('connection ending....');
 			});
 		});
 	}
 }
+
+
+
+
