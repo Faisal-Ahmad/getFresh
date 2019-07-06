@@ -2,6 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <script>
+            function myFunction() {
+            var txt;
+            if (confirm("Press a button!")) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("demo").innerHTML = txt;
+            }
+        </script>
     </head>
     <body>
         <form method="post">
@@ -51,7 +62,7 @@
                         </td>
                         <td>
                             <a href="/supplier/edit/<%= productlist[i].id %>">Edit</a> | 
-                            <a href="/supplier/delete/<%= productlist[i].id%>">Delete</a>
+                             <a href="/supplier/delete/<%= productlist[i].id%>">Delete</a>
                         </td>
                     </tr>
                     <% } %>                 

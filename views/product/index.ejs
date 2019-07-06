@@ -8,38 +8,29 @@
                 <table align="center" border="1px" width="100%">
                     <tr>
                         <th>
-                            Date
-                        </th>
-                        <th>
                             Name
                         </th>
                         <th>
-                            Quantity
+                            Description
                         </th>
                         <th>
                             Price
-                        </th>
-                        <th colspan="2">
-                            Operations
                         </th>
                     </tr>
                     <% for(var i=0; i < productlist.length; i++){ %>
                     <tr>
                         <td>
-                            <%= productlist[i].Date %>
+                            <%= productlist[i].name %>
                         </td>
                         <td>
-                            <%= productlist[i].Name %>
+                            <%= productlist[i].description %>
                         </td>
                         <td>
-                            <%= productlist[i].Quantity %>
+                            <%= productlist[i].price %>
                         </td>
                         <td>
-                            <%= productlist[i].Price %>
-                        </td>
-                        <td>
-                            <a href="/supplier/edit/<%= productlist[i].Id %>">Edit</a> | 
-                            <a href="/supplier/delete/<%= productlist[i].Id%>">Delete</a>
+                            <a href="/product/buy/<%= productlist[i].Id %>">Buy</a>
+                            <a href="/product/buy/<%= productlist[i].Id %>">Add Cart</a>
                         </td>
                     </tr>
                     <% } %>                 
