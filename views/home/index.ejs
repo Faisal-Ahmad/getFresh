@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+<<<<<<< HEAD
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -16,10 +16,15 @@
   <!-- Custom styles for this template -->
   <link href="css/shop-homepage.css" rel="stylesheet">
 
+=======
+	<title>Home page</title>
+	<link rel="stylesheet" type="text/css" href="/assets/style.css">
+>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
 </head>
-
+<div class="head">
 <body>
 
+<<<<<<< HEAD
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
@@ -221,7 +226,59 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendorHome/jquery/jquery.min.js"></script>
   <script src="vendorHome/bootstrap/js/bootstrap.bundle.min.js"></script>
+=======
+	<h1>Welcome GET FRESH <br><a href "/home/edit/><%=uname%></a></br></h1>
+	
+
+	<a href="/home/add">Add User</a> | 
+	<a href="/home/user_list">User List</a>
+   <a href="/home/edit/<%= usl %>">Edit</a> | 
+	<a href="/logout">Logout</a>
+	 </div class="head">
+ 	<div class="h6">
+	<table align="center">
+	
+	
+	    <tr>
+			
+			<td>Serial:</td>
+			<td><%= usl%></td>
+			
+		</tr>
+		<tr>
+			
+			<td>Username:</td>
+			<td><%= uname %></td>
+			
+		</tr>
+
+		
+
+		<tr>
+			
+			<td>password:</td>
+			<td><%= upass %></td>
+			
+		</tr>
+		
+		<tr>
+			
+			<td>DOB:</td>
+			<td><%= udob %></td>
+			
+		</tr>
+		<tr>
+			
+			<td>Email:</td>
+			<td><%= umail %></td>
+			
+		</tr>
+
+		
+	</table>
+	</div class="h6">
+	
+>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
 
 </body>
-
 </html>

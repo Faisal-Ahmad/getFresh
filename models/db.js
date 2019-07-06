@@ -4,7 +4,11 @@ var confiq = {
   host     : 'localhost',
   user     : 'root',
   password : '',
+<<<<<<< HEAD
   database : 'getfreshdb'
+=======
+  database : 'node1'
+>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
 };
 
 var getConnection = function(callback){
