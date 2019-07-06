@@ -1,60 +1,83 @@
-
-
 var mysql = require('mysql');
 
-
-
-
-var setup = {
+var confiq = {
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'getfresh'
+  database : 'getfreshdb'
 };
 
 var getConnection = function(callback){
-	var connection = mysql.createConnection(setup);
+
+	var connection = mysql.createConnection(confiq);
+	
 	connection.connect(function(err) {
 	  	if (err){
-	  		console.log('Error in connection...');
+	  		console.log('Connection error...');
 	  	}
+	  	console.log('connected as id ' + connection.threadId);
 	});
+
 	callback(connection);
 }
 
 module.exports= {
-	getResult: function(sql, callback){
+	getResult: function(sql, params, callback){
 
 		getConnection(function(connection){
-			connection.query(sql, function (error, results) {
 
-				if(error){
-					callback([]);
-				}else{
-					callback(results);					
-				}
-			});
-
+			if(params != ""){
+				connection.query(sql, params, function (error, results) {
+					if(error){
+						callback([]);
+					}else{
+						callback(results);					
+					}
+				});				
+			}else{
+				connection.query(sql, function (error, results) {
+					if(error){
+						callback([]);
+					}else{
+						callback(results);					
+					}
+				});	
+			}
 			connection.end(function(err) {
-				console.log('connection ends');
+				console.log('connection ending....');
 			});
 		});
 	},
-	execute: function(sql, callback){
+	execute: function(sql, params, callback){
 
 		getConnection(function(connection){
-			connection.query(sql, function (error, results) {
 
-				if(error){
-					callback(false);
-				}else{
-					callback(true);					
-				}
-			});
+			if(params != ""){
+				connection.query(sql, params, function (error, results) {
+					if(error){
+						console.log(error);
+						callback(false);
+					}else{
+						callback(true);					
+					}
+				});
+			}else{
+				connection.query(sql, function (error, results) {
+					if(error){
+						callback(false);
+					}else{
+						callback(true);					
+					}
+				});
+			}
 
 			connection.end(function(err) {
-				console.log('connection ends');
+				console.log('connection ending....');
 			});
 		});
 	}
 }
+
+
+
+
