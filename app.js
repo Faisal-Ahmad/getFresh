@@ -9,7 +9,7 @@ var register = require('./controllers/register');
 var admin = require('./controllers/admin');
 var home = require('./controllers/home');
 var supplier = require('./controllers/supplier');
-var supplier = require('./controllers/employee');
+var employee = require('./controllers/employee');
 var app = express();
 
 //configuration
@@ -26,6 +26,8 @@ app.use('/supplier',supplier);
 app.use('/register',register);
 app.use('/admin',admin);
 app.use('/home',home);
+app.use('/employee',employee);
+
 
 //routing
 app.get('/', function(req, res){
