@@ -16,7 +16,7 @@ router.get('/signup', function(req, res){
 // ########### admin dashboard
 
 router.get('/', function(req, res){
-    return res.send("dashboard")
+    return res.render('admin/dashboard')
 });
 
 module.exports = router;

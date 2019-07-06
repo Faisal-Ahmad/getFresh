@@ -9,7 +9,7 @@ router.get('/login', function(req, res){
 
 // ######## login page ###########
 
-router.get('/signpu', function(req, res){
+router.get('/signup', function(req, res){
 	res.send('welcome to signup page');
 });
 
