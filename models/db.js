@@ -9,7 +9,7 @@ var setup = {
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'getfresh'
+  database : 'getfresh' 
 };
 
 var getConnection = function(callback){

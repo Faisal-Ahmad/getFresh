@@ -9,6 +9,7 @@ var register = require('./controllers/register');
 var admin = require('./controllers/admin');
 var home = require('./controllers/home');
 var supplier = require('./controllers/supplier');
+var supplier = require('./controllers/employee');
 var app = express();
 
 //configuration
