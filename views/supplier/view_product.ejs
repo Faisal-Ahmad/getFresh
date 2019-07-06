@@ -8,16 +8,19 @@
                 <table align="center" border="1px" width="100%">
                     <tr>
                         <th>
-                            Date
+                            ID 
                         </th>
                         <th>
                             Name
                         </th>
                         <th>
-                            Quantity
+                            Description
                         </th>
                         <th>
                             Price
+                        </th>
+                        <th>
+                            Approve
                         </th>
                         <th colspan="2">
                             Operations
@@ -26,20 +29,29 @@
                     <% for(var i=0; i < productlist.length; i++){ %>
                     <tr>
                         <td>
-                            <%= productlist[i].Date %>
+                            <%= productlist[i].id %>
                         </td>
                         <td>
-                            <%= productlist[i].Name %>
+                            <%= productlist[i].name %>
                         </td>
                         <td>
-                            <%= productlist[i].Quantity %>
+                            <%= productlist[i].description %>
                         </td>
                         <td>
-                            <%= productlist[i].Price %>
+                            <%= productlist[i].price %>
                         </td>
                         <td>
-                            <a href="/supplier/edit/<%= productlist[i].Id %>">Edit</a> | 
-                            <a href="/supplier/delete/<%= productlist[i].Id%>">Delete</a>
+                        
+                            <% if(productlist[i].approved) { %>
+                                  <p>approved</p>  
+                            <% }
+                            else {%>
+                            <p>Panding</p>
+                            <%}%>
+                        </td>
+                        <td>
+                            <a href="/supplier/edit/<%= productlist[i].id %>">Edit</a> | 
+                            <a href="/supplier/delete/<%= productlist[i].id%>">Delete</a>
                         </td>
                     </tr>
                     <% } %>                 

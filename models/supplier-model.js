@@ -15,20 +15,20 @@ module.exports = {
         });
 	},
 	getAll: function(id,callback){
-		var sql = "select * from product where Employee_Id = ?";
+		var sql = "select * from product where userId = ?";
 		db.getResult(sql, [id], function(results){
 			callback(results);
 		});	
 	},
 	getByproductId: function(id, callback){
-		var sql = "select * from product where Id= ?";
+		var sql = "select * from product where id= ?";
 		db.getResult(sql,[id] ,function(result){
 			callback(result);
 		});
 	},
 	update: function(product, callback){
-		var sql = "update product set Name=?, Quantity=?,Price=? where Id=?";
-		db.execute(sql, [product.pname, product.pquantity,product.pprice, product.id], function(status){
+		var sql = "update product set name=?, description=?,Price=? where id=?";
+		db.execute(sql, [product.pname, product.pdescription,product.pprice, product.id], function(status){
 			callback(status);
 		});
 	},

@@ -43,7 +43,7 @@ router.get('/', function(req, res){
 		});
 	});
 	router.get('/view_product', function(req, res){
-        var userId = '1000';
+        var userId = '1';
 		supplier.getAll(userId,function(results){
 		if(results != null){
 			res.render('supplier/view_product', {productlist: results});			
@@ -66,7 +66,7 @@ router.post('/edit/:id', function(req, res){
 	
 	var data = {
 		pname: req.body.name,
-		pquantity: req.body.quantity,
+		pdescription: req.body.description,
 		pprice: req.body.price,
 		id: req.params.id
 	};
