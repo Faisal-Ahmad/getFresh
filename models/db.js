@@ -27,37 +27,56 @@ var getConnection = function(callback){
 }
 
 module.exports= {
-	getResult: function(sql, callback){
+	getResult: function(sql, params, callback){
 
 		getConnection(function(connection){
-			connection.query(sql, function (error, results) {
 
-				if(error){
-					callback([]);
-				}else{
-					callback(results);					
-				}
-			});
-
+			if(params != ""){
+				connection.query(sql, params, function (error, results) {
+					if(error){
+						callback([]);
+					}else{
+						callback(results);					
+					}
+				});				
+			}else{
+				connection.query(sql, function (error, results) {
+					if(error){
+						callback([]);
+					}else{
+						callback(results);					
+					}
+				});	
+			}
 			connection.end(function(err) {
-				console.log('connection ends');
+				console.log('connection ending....');
 			});
 		});
 	},
-	execute: function(sql, callback){
+	execute: function(sql, params, callback){
 
 		getConnection(function(connection){
-			connection.query(sql, function (error, results) {
 
-				if(error){
-					callback(false);
-				}else{
-					callback(true);					
-				}
-			});
+			if(params != ""){
+				connection.query(sql, params, function (error, results) {
+					if(error){
+						callback(false);
+					}else{
+						callback(true);					
+					}
+				});
+			}else{
+				connection.query(sql, function (error, results) {
+					if(error){
+						callback(false);
+					}else{
+						callback(true);					
+					}
+				});
+			}
 
 			connection.end(function(err) {
-				console.log('connection ends');
+				console.log('connection ending....');
 			});
 		});
 	}

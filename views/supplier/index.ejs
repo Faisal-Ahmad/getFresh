@@ -1,14 +1,18 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
     </head>
     <body>
-            <h4>Welcome <%=user.Name%></h4>
+            <span>
+                    <p align="left">Welcome <%=user.Name%></p>
+                    <input type="button" onclick="location.href='/logout'" value="Logout">
+            </span>
+            
             <div align="center"> 
                 <hr/>
                  <input type="button" onclick="location.href='/supplier/add_product'" value="Add Product">  |  
-                 <input type="button" onclick="location.href='/supplier/add_product'" value="View Product"> 
-                
+                 <input type="button" onclick="location.href='/supplier/view_product'" value="View Product"> 
                 <hr/>
             </div>
             <form method="post">
@@ -50,8 +54,7 @@
                                 <td>
                                     <h3> <%=user.Contact%> </h3>
                             </td>
-                        </tr>
-                        
+                    </tr>   
                 </table>
             </form>
     </body>

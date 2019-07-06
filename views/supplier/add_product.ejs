@@ -1,6 +1,15 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="stylesheets/jquery-ui.min.css">
+        <script src="stylesheets/jquery-ui.js"></script>
+        <script src="stylesheets/jquery-ui.min.js"></script>
+        <script>
+            $( function() {
+              $( "#datepicker" ).datepicker();
+            } );
+        </script>
     </head>
     <body>
         <form method="post">
@@ -10,6 +19,22 @@
                             <h1>Add Product </h1>
                         </td>
                     </tr>
+                    <tr>
+                        <td>
+                            <h3>User Id : </h3>
+                        </td>
+                        <td>
+                                <input type="text" name="userId" value="<%=userId %>" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Date : </h3>
+                        </td>
+                        <td>
+                            <input type="date" name="date">
+                        </td>
+                    </tr>   
                     <tr>
                         <td>
                             <h3>Name : </h3>

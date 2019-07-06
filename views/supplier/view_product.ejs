@@ -1,0 +1,53 @@
+<!DOCTYPE html></html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method="post">
+                <table align="center" border="1px" width="100%">
+                    <tr>
+                        <th>
+                            Date
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Quantity
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                        <th colspan="2">
+                            Operations
+                        </th>
+                    </tr>
+                    <% for(var i=0; i < productlist.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%= productlist[i].Date %>
+                        </td>
+                        <td>
+                            <%= productlist[i].Name %>
+                        </td>
+                        <td>
+                            <%= productlist[i].Quantity %>
+                        </td>
+                        <td>
+                            <%= productlist[i].Price %>
+                        </td>
+                        <td>
+                            <a href="/supplier/edit/<%= productlist[i].Id %>">Edit</a> | 
+                            <a href="/supplier/delete/<%= productlist[i].Id%>">Delete</a>
+                        </td>
+                    </tr>
+                    <% } %>                 
+                </table>
+                <br/><br/>
+                <div align="center">
+                    <input type="button" onclick="location.href='/supplier'" value="Back">
+                </div>
+            </form>
+    </body>
+<html>
