@@ -26,7 +26,6 @@ app.use('/supplier',supplier);
 app.use('/register',register);
 app.use('/admin',admin);
 app.use('/home',home);
-app.use('/employee',employee);
 
 //routing
 app.get('/', function(req, res){
