@@ -7,20 +7,20 @@ var cookieParser 	= require('cookie-parser');
 var login 			= require('./controllers/login');
 var logout 			= require('./controllers/logout');
 var home 			= require('./controllers/home');
-var signup 			= require('./controllers/signup');
+var register 			= require('./controllers/register');
+var admin 			= require('./controllers/admin');
 var supplier = require('./controllers/supplier');
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 var employee = require('./controllers/employee');
 var app = express();
-=======
+
 //var register 		= require('./controllers/register');
 var app 			= express();
->>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
-=======
+//>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
+
 //var register 		= require('./controllers/register');
 var app 			= express();
->>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
+//>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
 
 
 //CONFIG
@@ -37,23 +37,23 @@ app.use(express.static(__dirname+'/public'));
 app.use('/login', login);
 app.use('/logout', logout);
 app.use('/home', home);
-app.use('/signup', signup);
+//app.use('/signup', signup);
 //app.use('/register', register);
 app.use('/supplier',supplier);
-<<<<<<< HEAD
-<<<<<<< HEAD
+//<<<<<<< HEAD
+//<<<<<<< HEAD
 app.use('/register',register);
 app.use('/admin',admin);
 app.use('/home',home);
 app.use('/employee',employee);
-=======
+
 app.use('/assets', express.static('ext'))
 
->>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
-=======
+//>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
+
 app.use('/assets', express.static('ext'))
 
->>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
+//>>>>>>> 4933ec92d0f806f5b3ff51d5391b8a3e6effcdae
 
 
 //ROUTING
