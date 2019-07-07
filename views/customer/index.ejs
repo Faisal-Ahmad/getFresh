@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <hr/>
+        <div align="center">
+            <input type="button" onclick="location.href='/customer/view_product'" value="View Products">
+        </div>
+    <hr/>
+            <form method="post">
+                <table align="center">
+                    <tr>
+                        <td>
+                            <h1>Your Information </h1>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>ID : </h3>
+                        </td>
+                        <td>
+                            <h3> <%=user.id%> </h3>
+                        </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                <h3>Name : </h3>
+                            </td>
+                            <td>
+                                <h3> <%=user.name%> </h3>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <h3>Email : </h3>
+                                </td>
+                                <td>
+                                    <h3> <%=user.email%> </h3>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <h3>Address : </h3>
+                                </td>
+                                <td>
+                                    <h3> <%=user.address%> </h3>
+                            </td>
+                    </tr>
+                    <tr>
+                            <td>
+                                    <h3>Mobile : </h3>
+                                </td>
+                                <td>
+                                    <h3> <%=user.mobile_no%> </h3>
+                            </td>
+                    </tr>
+                </table>
+            </form>
+    </body>
+<html>

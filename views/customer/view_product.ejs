@@ -1,0 +1,44 @@
+<!DOCTYPE html></html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form method="post">
+                <table align="center" border="1px" width="100%">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Description
+                        </th>
+                        <th>
+                            Price
+                        </th>
+                    </tr>
+                    <% for(var i=0; i < productlist.length; i++){ %>
+                    <tr>
+                        <td>
+                            <%= productlist[i].name %>
+                        </td>
+                        <td>
+                            <%= productlist[i].description %>
+                        </td>
+                        <td>
+                            <%= productlist[i].price %>
+                        </td>
+                        <td>
+                            <a href="/product/buy/<%= productlist[i].Id %>">Buy</a> |   
+                            <a href="/product/buy/<%= productlist[i].Id %>">Add Cart</a>
+                        </td>
+                    </tr>
+                    <% } %>                 
+                </table>
+                <br/><br/>
+                <div align="center">
+                    <input type="button" onclick="location.href='/supplier'" value="Back">
+                </div>
+            </form>
+    </body>
+<html>
